@@ -21,7 +21,7 @@ app.post('/getQR',async (req,res)=>{
     img_svg.pipe(fs.createWriteStream(path.join(__dirname, `/uploads/${uniqueid}.png`)))
     res.render("showQR",{imgurl:`uploads/${uniqueid}.png`});
 })
-PORT=process.env.PORT||3000;
+PORT=process.env.PORT||80;
 app.listen(PORT,(req,res)=>{
-    console.log('server started a port 3000')
+    console.log('server started a port 80')
 })
